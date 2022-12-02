@@ -100,7 +100,7 @@ public class OlxScanningBot extends ScanningBot {
     @Override
     protected boolean validateCity(String city) {
         // Ping the page to check if it exists
-        String url = baseUrl + city;
+        String url = baseUrl + city + '/';
         return BotSetup.getUrlStatus(url) == 200;
     }
 
